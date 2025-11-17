@@ -1,0 +1,8 @@
+// send calldata -> function dispatch -> function
+
+// takes off of the stack
+// returns onto the stack 
+
+#define macro MAIN() = takes(0) returns (0) {
+    
+}

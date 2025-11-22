@@ -83,20 +83,20 @@ PUSH0                // [0x00]
 DUP1                 // [0x00, 0x00]
 REVERT               // []
 
-
-JUMPDEST
-PUSH2 0x0052
-PUSH1 0x04
-DUP1
-CALLDATASIZE
-SUB
-DUP2
-ADD
-SWAP1
-PUSH2 0x004d
-SWAP2
-SWAP1
-PUSH2 0x00ba
+// 
+JUMPDEST             // [func_selector]      
+PUSH2 0x0052         // [0x0052, func_selector]
+PUSH1 0x04           // [0x04, 0x0052, func_selector]
+DUP1                 // [0x04, 0x04, 0x0052, func_selector]
+CALLDATASIZE         // [calldata_size, 0x04, 0x04, 0x0052, func_selector]
+SUB                  
+DUP2                 
+ADD                  
+SWAP1                 
+PUSH2 0x004d         
+SWAP2                
+SWAP1               
+PUSH2 0x00ba         
 JUMP
 JUMPDEST
 PUSH2 0x0072
